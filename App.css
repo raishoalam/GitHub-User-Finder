@@ -1,0 +1,160 @@
+/* Body and App layout */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f6f8fa;
+  color: #333;
+}
+
+.App {
+  text-align: center;
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+/* Search Bar Styling */
+.search-bar {
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-bar input {
+  padding: 12px 20px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 1px solid #d1d5da;
+  width: 80%;
+  max-width: 400px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.search-bar input:focus {
+  outline: none;
+  border-color: #0073e6;
+  box-shadow: 0 0 8px rgba(0, 115, 230, 0.5);
+}
+
+.search-bar button {
+  padding: 12px 20px;
+  font-size: 16px;
+  background-color: #0073e6;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-left: 10px;
+  transition: background-color 0.3s;
+}
+
+.search-bar button:hover {
+  background-color: #005bb5;
+}
+
+/* User Profile Card */
+.user-profile {
+  background-color: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 40px;
+  display: inline-block;
+  width: 100%;
+  max-width: 600px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.user-profile:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.user-profile img {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  margin-bottom: 20px;
+  transition: transform 0.3s ease;
+}
+
+.user-profile img:hover {
+  transform: scale(1.1);
+}
+
+.user-profile h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.user-profile p {
+  font-size: 16px;
+  color: #555;
+}
+
+.user-profile .followers {
+  font-weight: bold;
+}
+
+/* Repository List Card */
+.repo-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.repo-item {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.repo-item:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transform: translateY(-5px);
+}
+
+.repo-item h3 {
+  font-size: 18px;
+  color: #0073e6;
+}
+
+.repo-item a {
+  text-decoration: none;
+  color: #0073e6;
+}
+
+.repo-item p {
+  font-size: 14px;
+  color: #666;
+  margin: 5px 0;
+}
+
+.repo-item .stars {
+  font-weight: bold;
+  color: #333;
+}
+
+/* Loading and Error Messages */
+.loading-spinner,
+.error-message {
+  font-size: 18px;
+  color: #333;
+}
+
+.error-message {
+  color: red;
+}
+
+@media (max-width: 768px) {
+  .search-bar input, .search-bar button {
+    width: 100%;
+  }
+}
